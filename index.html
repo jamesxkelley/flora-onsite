@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="The FLORA team on-site, October 5–8 in New York.">
+<meta name="description" content="The FLORA team on-site, October 5–7 in New York.">
 <style>html,body{margin:0}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>FLORA On-site</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +52,7 @@ body{
 a{color:inherit}
 a:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:4px}
 
-.page{max-width:1320px;margin-inline:auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 56px}
+.page{max-width:1240px;margin-inline:auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 56px}
 
 /* top bar */
 .top{display:flex;align-items:center;justify-content:space-between;gap:16px}
@@ -114,11 +114,11 @@ h1 span{display:block;color:var(--faint)}
 /* board */
 .board{
   position:relative;margin-top:22px;
-  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
-  grid-template-areas:"mon tue wed thu" "notes tue wed thu";grid-template-rows:auto 1fr;
-  column-gap:52px;row-gap:44px;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-areas:"mon tue wed" "notes tue wed";grid-template-rows:auto 1fr;
+  column-gap:64px;row-gap:44px;
 }
-#mon{grid-area:mon}#tue{grid-area:tue}#wed{grid-area:wed}#thu{grid-area:thu}.notes{grid-area:notes}
+#mon{grid-area:mon}#tue{grid-area:tue}#wed{grid-area:wed}.notes{grid-area:notes}
 .cross{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;z-index:2}
 .cross path{fill:none;stroke:var(--label);stroke-width:1.5}
 .cross circle{fill:var(--node);stroke:var(--label);stroke-width:1.5}
@@ -183,16 +183,11 @@ span.place{border-bottom:0;color:var(--muted)}
 
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;margin-top:64px;padding-top:18px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--muted)}
 
-@media (max-width:1180px){
-  .board{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-areas:"mon tue" "notes tue" "wed thu";grid-template-rows:auto 1fr auto;row-gap:56px}
-  .cursor{display:none}
-}
 @media (max-width:960px){
   .hero{grid-template-columns:minmax(0,1fr)}
+  .board{grid-template-columns:minmax(0,1fr);grid-template-areas:"mon" "tue" "wed" "notes";grid-template-rows:none;row-gap:56px}
+  .cursor{display:none}
   .st-side{text-align:left}
-}
-@media (max-width:720px){
-  .board{grid-template-columns:minmax(0,1fr);grid-template-areas:"mon" "tue" "wed" "thu" "notes";grid-template-rows:none}
 }
 @media (max-width:520px){
   .status{padding:18px 20px;border-radius:20px}
@@ -217,7 +212,7 @@ span.place{border-bottom:0;color:var(--muted)}
   <section class="hero">
     <div>
       <p class="eyebrow">Team on-site · New York</p>
-      <h1>On-site <span>October 5–8</span></h1>
+      <h1>On-site <span>October 5–7</span></h1>
     </div>
     <p class="lede">Talks, an afternoon at <b>the Met</b>, a makeathon built from what we find there, and a few good dinners. All times are New York time.</p>
   </section>
@@ -324,7 +319,7 @@ span.place{border-bottom:0;color:var(--muted)}
     <!-- WEDNESDAY -->
     <div class="lane" id="wed" data-day="2026-10-07">
       <header class="lane-head"><h2>Wednesday</h2><span class="date">Oct 7</span><span class="today" hidden>Today</span></header>
-      <p class="lane-sum">Immersion, makeathon, Gabe Whaley</p>
+      <p class="lane-sum">Immersion, makeathon, Gabe Whaley, dinner in Brooklyn</p>
       <div class="flow">
         <article class="node" data-start="2026-10-07T12:30:00-04:00" data-end="2026-10-07T13:30:00-04:00" data-title="Cat's Immersion Program">
           <div class="card">
@@ -359,15 +354,8 @@ span.place{border-bottom:0;color:var(--muted)}
             <p>A chat with the CEO and founder of MSCHF.</p>
           </div>
         </article>
-      </div>
-    </div>
-
-    <!-- THURSDAY -->
-    <div class="lane" id="thu" data-day="2026-10-08">
-      <header class="lane-head"><h2>Thursday</h2><span class="date">Oct 8</span><span class="today" hidden>Today</span></header>
-      <p class="lane-sum">Team dinner in Brooklyn, then drinks</p>
-      <div class="flow">
-        <article class="node" data-start="2026-10-08T18:30:00-04:00" data-end="2026-10-08T20:30:00-04:00" data-title="Team dinner at Isla &amp; Co">
+        <div class="wire"></div>
+        <article class="node" data-start="2026-10-07T18:30:00-04:00" data-end="2026-10-07T20:30:00-04:00" data-title="Team dinner at Isla &amp; Co">
           <div class="card">
             <div class="node-head"><span class="kind"><i class="dot after"></i>Dinner</span><time>6:30–8:30 pm</time></div>
             <h3>Team dinner at Isla &amp; Co</h3>
@@ -377,7 +365,7 @@ span.place{border-bottom:0;color:var(--muted)}
           </div>
         </article>
         <div class="wire"></div>
-        <article class="node" data-start="2026-10-08T20:30:00-04:00" data-end="2026-10-09T00:00:00-04:00" data-title="Hang &amp; drinks at Dead Letter 9">
+        <article class="node" data-start="2026-10-07T20:30:00-04:00" data-end="2026-10-08T00:00:00-04:00" data-title="Hang &amp; drinks at Dead Letter 9">
           <div class="card">
             <div class="node-head"><span class="kind"><i class="dot after"></i>Drinks</span><time>8:30 pm on</time></div>
             <h3>Dead Letter 9</h3>
@@ -488,7 +476,7 @@ span.place{border-bottom:0;color:var(--muted)}
       tagEl.textContent = "That's a wrap";
       bigEl.textContent = 'See you next time';
       bigEl.classList.add('is-title');
-      whenEl.textContent = 'Oct 5–8';
+      whenEl.textContent = 'Oct 5–7';
       whatEl.textContent = 'Thanks for coming.';
     }
   }
